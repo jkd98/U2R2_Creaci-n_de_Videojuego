@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float runSpeed = 3.0f;
+    public float runSpeed = 2.0f;
     public float jumpSpeed = 3.0f;
     Rigidbody2D rb2d; // referencia al rigidbody
-    // Start is called before the first frame update
+
+    // Para salto mejorado
+    public bool betterJump = false;
+    public float fallMultiplier = 0.5f;
+    public float lowJumpMultiplier = 1f;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); //obtiene referencia de el componente
@@ -29,9 +33,23 @@ public class PlayerMove : MonoBehaviour
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
         }
 
-        if(Input.GetKey("space") && CheckGround.isGrounded)
+        if (Input.GetKey("space") && CheckGround.isGrounded)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
+        }
+
+        if (betterJump)  // Si esta opción está activada
+        {
+            // 1. CAÍDA MÁS RÁPIDA
+            if (rb2d.velocity.y < 0)  // Si el personaje está cayendo (velocidad vertical negativa)
+            {
+                rb2d.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier) * Time.deltaTime;
+            }
+            // 2. SALTO CORTO
+            else if (rb2d.velocity.y > 0 && !Input.GetKey("space"))  // Si está subiendo Y NO se mantiene presionado espacio
+            {
+                rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier) * Time.deltaTime;
+            }
         }
     }
 }
