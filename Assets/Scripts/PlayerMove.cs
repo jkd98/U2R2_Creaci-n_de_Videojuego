@@ -12,6 +12,9 @@ public class PlayerMove : MonoBehaviour
     public bool betterJump = false;
     public float fallMultiplier = 0.5f;
     public float lowJumpMultiplier = 1f;
+    // Para animaciones
+    public SpriteRenderer spriteRenderer; // referencia al sprite renderer del componente
+    public Animator animator; // referencia al animator del componente
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); //obtiene referencia de el componente
@@ -23,19 +26,36 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
             rb2d.velocity = new Vector2(runSpeed, rb2d.velocity.y);
+            spriteRenderer.flipX = false; // mirar a la derecha
+            animator.SetBool("Run", true);
         }
         else if (Input.GetKey("a") || Input.GetKey("left"))
         {
             rb2d.velocity = new Vector2(-runSpeed, rb2d.velocity.y);
+            spriteRenderer.flipX = true; // mirar a la izquierda
+            animator.SetBool("Run", true);
         }
         else
         {
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+            animator.SetBool("Run", false);
         }
 
         if (Input.GetKey("space") && CheckGround.isGrounded)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
+        }
+
+        // Animaciones de salto
+        if (CheckGround.isGrounded)
+        {
+            animator.SetBool("Jump", false);
+            
+        }
+        else
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Run", false);
         }
 
         if (betterJump)  // Si esta opción está activada

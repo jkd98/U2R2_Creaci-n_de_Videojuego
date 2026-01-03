@@ -1177,6 +1177,8 @@ MonoBehaviour:
   betterJump: 1
   fallMultiplier: 0.5
   lowJumpMultiplier: 1
+  spriteRenderer: {fileID: 1812226976}
+  animator: {fileID: 1812226975}
 --- !u!1 &1980656747
 GameObject:
   m_ObjectHideFlags: 0
