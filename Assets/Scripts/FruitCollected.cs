@@ -13,7 +13,7 @@ public class FruitCollected : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             // Activar el collected animation hijo de la fruta
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
-
+            // findObjectOfType<FruitManager>().AllFruitsCollected();
             Destroy(gameObject, 0.5f); // Destruir el objeto fruta después de 0.5 segundos
         }
     }
