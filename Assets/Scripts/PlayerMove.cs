@@ -12,15 +12,67 @@ public class PlayerMove : MonoBehaviour
     public bool betterJump = false;
     public float fallMultiplier = 0.5f;
     public float lowJumpMultiplier = 1f;
+
     // Para animaciones
     public SpriteRenderer spriteRenderer; // referencia al sprite renderer del componente
     public Animator animator; // referencia al animator del componente
+
+    // Para doble salto
+    public float doubleJumpSpeed = 2.5f; // Para que el doble salto sea un poco más bajo
+    private bool canDoubleJump = false;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); //obtiene referencia de el componente
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey("space"))
+        {
+            if (CheckGround.isGrounded) // Si está en el suelo
+            {
+                canDoubleJump = true; // Resetea la posibilidad de doble salto
+                rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
+            }
+            else
+            {
+                if (Input.GetKeyDown("space"))
+                {
+                    if (canDoubleJump)
+                    {
+                        animator.SetBool("DoubleJump", true);
+                        rb2d.velocity = new Vector2(rb2d.velocity.x, doubleJumpSpeed);
+                        canDoubleJump = false; // Desactiva la posibilidad de otro doble salto
+                    }
+                }
+            }
+        }
+
+        // Animaciones de salto
+        if (CheckGround.isGrounded)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("DoubleJump", false);
+            animator.SetBool("Falling", false);
+
+        }
+        else
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Run", false);
+        }
+
+        if (rb2d.velocity.y < 0)
+        {
+            animator.SetBool("Falling", true);
+        }
+        else if (rb2d.velocity.y > 0)
+        {
+            animator.SetBool("Falling", false);
+        }
+    }
+
     void FixedUpdate()
     {
         if (Input.GetKey("d") || Input.GetKey("right"))
@@ -38,23 +90,6 @@ public class PlayerMove : MonoBehaviour
         else
         {
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
-            animator.SetBool("Run", false);
-        }
-
-        if (Input.GetKey("space") && CheckGround.isGrounded)
-        {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
-        }
-
-        // Animaciones de salto
-        if (CheckGround.isGrounded)
-        {
-            animator.SetBool("Jump", false);
-            
-        }
-        else
-        {
-            animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
         }
 
