@@ -10,7 +10,8 @@ public class DamageObject : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Jugador dañado por el objeto dañino.");
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<PlayerRespawn>().PlayerDamage();
         }
     }
 }

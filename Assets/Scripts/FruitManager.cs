@@ -8,6 +8,7 @@ using TMPro;
 public class FruitManager : MonoBehaviour
 {
     public TextMeshProUGUI fruitText;
+    public GameObject transition;
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +21,7 @@ public class FruitManager : MonoBehaviour
         {
             Debug.Log("¡Todas las frutas recolectadas!");
             fruitText.gameObject.SetActive(true);
+            transition.SetActive(true);
             Invoke("ChangeScene", 1f);
         }
     }

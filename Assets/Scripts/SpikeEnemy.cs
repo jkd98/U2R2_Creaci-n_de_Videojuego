@@ -9,7 +9,8 @@ public class SpikeEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Jugador dañado por el enemigo.");
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<PlayerRespawn>().PlayerDamage();
         }
     }
 }
