@@ -15,6 +15,7 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Documento leccion 4: https://drive.google.com/file/d/1xAF-SM8prBc1YGRSdS6CndjJ-uZpvL1R/view?usp=sharing
 * Documento leccion 5: https://drive.google.com/file/d/1_hz-ElVS1QC5wKXo_Hqe2ZdEcCcTL7Zo/view?usp=sharing
 * Documento leccion 6: https://drive.google.com/file/d/1ReTL0b8R3YdM9Mt5C4UqSm9FmuBLe87t/view?usp=sharing
+* Documento leccion 7: https://drive.google.com/file/d/1-vaXoGGTDoGX_sg_wP0neMEPCSUub5Uj/view?usp=sharing
 * Documento leccion #: 
 ## Videos explicativos de evidencia
 * Video leccion 1: https://drive.google.com/file/d/1V3Kj5etb5ciNRLm_VQRV1Ni3IYhDfdxD/view?usp=sharing
@@ -23,4 +24,5 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Video leccion 4: https://drive.google.com/file/d/1qeFj7Md2Chneu656kOhqsVNHuY8E2BVh/view?usp=sharing
 * Video leccion 5: https://drive.google.com/file/d/1_D89d0FARGyPgrEE-7dfGjAMcm_miREo/view?usp=sharing
 * Video leccion 6: https://drive.google.com/file/d/1nwNdGjrlnnBn64gCx4-HcNoH_6yuYraD/view?usp=sharing
+* Video leccion 7: https://drive.google.com/file/d/16BkcWfkHhG9XvAobSEaqc0ikrIoV2SAW/view?usp=sharing
 * Video leccion #: 
