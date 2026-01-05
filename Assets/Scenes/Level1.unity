@@ -5870,6 +5870,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4657478972179410113, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+      propertyPath: selectedPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6288229523954353267, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
       propertyPath: m_Name
       value: Frog
