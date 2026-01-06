@@ -9,10 +9,20 @@ public class FruitManager : MonoBehaviour
 {
     public TextMeshProUGUI fruitText;
     public GameObject transition;
-    // Update is called once per frame
+
+    public TextMeshProUGUI totalFruitsText;
+    public TextMeshProUGUI recolectedFruitsText;
+    private int totalFruits;
+
+    void Start()
+    {
+        totalFruits = transform.childCount;
+        totalFruitsText.text = totalFruits.ToString();
+    }
     void Update()
     {
         AllFruitsCollected();
+        recolectedFruitsText.text = transform.childCount.ToString();
     }
 
     void AllFruitsCollected()
