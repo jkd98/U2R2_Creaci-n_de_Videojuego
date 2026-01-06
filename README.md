@@ -25,7 +25,7 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Documento leccion 14: https://drive.google.com/file/d/1M_m2R5XawHO3gU_g3DKp-L-uV_d6T3Q3/view?usp=sharing
 * Documento leccion 15: https://drive.google.com/file/d/1LFENaIkUA0bhR-nwaufBGD01-qmmFlIn/view?usp=sharing
 * Documento leccion 16: https://drive.google.com/file/d/1v6-o1MPerTt0cTcxknAtt2KmKFDsVrLt/view?usp=sharing
-* Documento leccion #: 
+* Documento leccion 17: https://drive.google.com/file/d/14mKsXHkG-BlRydziHLzpLAR4exc-iMIN/view?usp=sharing
 * Documento leccion #: 
 * Documento leccion #: 
 * Documento leccion #: 
@@ -56,7 +56,7 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Video leccion 14: https://drive.google.com/file/d/1_TCzaB4bfU8FvXoLPRZc7YIPI4lbpHfJ/view?usp=sharing
 * Video leccion 15: https://drive.google.com/file/d/1IosLLTaSJdUWeCMqUTjKSaDUU3x_B8kk/view?usp=sharing
 * Video leccion 16: https://drive.google.com/file/d/1PKwPfKEoeQ6Edjmoa_vVhVMWYz6PLdZ1/view?usp=sharing
-* Video leccion #: 
+* Video leccion 17: https://drive.google.com/file/d/1143M6Bu1_6ipGQ8eClO-M4P1OIuLzezg/view?usp=sharing
 * Video leccion #: 
 * Video leccion #: 
 * Video leccion #: 
