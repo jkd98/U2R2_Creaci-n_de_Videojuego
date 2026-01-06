@@ -8,7 +8,7 @@ public class AIBasic : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public float spee = 0.5f;
     private float waitTime; // detenga en el punto que al que llega
-    private float startWaitTime = 2f; // tiempo que espera en cada punto
+    public float startWaitTime = 2f; // tiempo que espera en cada punto
     private int i; //punto al que se dirige
     private Vector2 actualPosition; //posicion actual del enemigo
     public Transform[] moveSpots; //puntos a los que se mueve el enemigo
