@@ -58,11 +58,17 @@ public class AIBasic : MonoBehaviour
         {
             //se mueve a la derecha
             spriteRenderer.flipX = false;
+            animator.SetBool("Idle",false);
         }
         else if (actualPosition.x > transform.position.x)
         {
             //se mueve a la izquierda
             spriteRenderer.flipX = true;
+            animator.SetBool("Idle",false);
+        }else if (transform.position.x == actualPosition.x)
+        {
+            //esta quieto
+            animator.SetBool("Idle",true);
         }
         
     }
