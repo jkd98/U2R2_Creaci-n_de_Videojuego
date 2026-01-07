@@ -43,7 +43,7 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Documento leccion 32: https://drive.google.com/file/d/1zB--Cq-yBmgBx16iYzqtStQ7WKrqKGB-/view?usp=sharing
 * Documento leccion 33: https://drive.google.com/file/d/1HT75r3knN6m90B2NOqbgXjoWQPyq7u7Z/view?usp=sharing
 * Documento leccion 34: https://drive.google.com/file/d/1AMjRWWkLCdatSmlJQBKe_XheZIGWBptL/view?usp=sharing
-* Documento leccion 35: 
+* Documento leccion 35: https://drive.google.com/file/d/1yU7Ab_WrKFI11reiauCBFypZra0p2xCq/view?usp=sharing
 * Documento leccion 36: 
 ## Videos explicativos de evidencia
 * Video leccion 1: https://drive.google.com/file/d/1V3Kj5etb5ciNRLm_VQRV1Ni3IYhDfdxD/view?usp=sharing
@@ -80,5 +80,5 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Video leccion 32: https://drive.google.com/file/d/1JF_3Vqy-Iu_y9alMeU6Y193I5UsKgSCm/view?usp=sharing
 * Video leccion 33: https://drive.google.com/file/d/1auJvW2cfHv78Mk4NwGmnFntFXIN0YGGM/view?usp=sharing
 * Video leccion 34: https://drive.google.com/file/d/1r2eBReQaDCFPyhBWTFSnT0IYeJCEbxdz/view?usp=sharing
-* Video leccion 35: 
+* Video leccion 35: https://drive.google.com/file/d/1nhqGduNqFEPfOL_KM8Ca7xxOOpuqmakL/view?usp=sharing
 * Video leccion 36: 
