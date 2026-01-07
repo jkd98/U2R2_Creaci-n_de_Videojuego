@@ -13,6 +13,9 @@ public class PlayerRespawn : MonoBehaviour
     // Para vidas
     public GameObject[] hearts;
     private int life;
+
+
+
     void Start()
     {
         life = hearts.Length;

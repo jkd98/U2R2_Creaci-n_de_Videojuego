@@ -40,7 +40,7 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Documento leccion 29: https://drive.google.com/file/d/1h5qasOQY8denOm_us21QLhdq-OM70zxR/view?usp=sharing
 * Documento leccion 30: https://drive.google.com/file/d/1QvHInXu-xlFQxAGbFMAp7rwIm_PKDMFK/view?usp=sharing
 * Documento leccion 31: https://drive.google.com/file/d/108EEgf90ea0ZDzT5a1R9ODq8D_5y014F/view?usp=sharing
-* Documento leccion #: 
+* Documento leccion 32: https://drive.google.com/file/d/1zB--Cq-yBmgBx16iYzqtStQ7WKrqKGB-/view?usp=sharing
 * Documento leccion #: 
 * Documento leccion #: 
 * Documento leccion #: 
@@ -77,7 +77,7 @@ Este es un repositorio que contiene las lecciones aprendidas de la unidad
 * Video leccion 29: https://drive.google.com/file/d/1gDagID8ufxrX_WEp31DpjG5dcRjVRlNm/view?usp=sharing
 * Video leccion 30: https://drive.google.com/file/d/1XsmI_Mo4_X9RFIfZmHiMaDlMybFe_Rhs/view?usp=sharing
 * Video leccion 31: https://drive.google.com/file/d/1fkcJmVNSId9aqD5Q76ofIhZ4jmznjZ2A/view?usp=sharing
-* Video leccion #: 
+* Video leccion 32: https://drive.google.com/file/d/1JF_3Vqy-Iu_y9alMeU6Y193I5UsKgSCm/view?usp=sharing
 * Video leccion #: 
 * Video leccion #: 
 * Video leccion #: 

@@ -665,7 +665,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -997,10 +997,22 @@ PrefabInstance:
       value: Frog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1364321951546076273, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+--- !u!114 &684753484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 837059762811428789, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+  m_PrefabInstance: {fileID: 684753483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a484c358cec271390905adbd40b37f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &786640511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2453,6 +2465,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2374647463185183433, guid: 36bda0a4e29e47cae89ccbe5a0b1dfcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 684753484}
+    - target: {fileID: 2374647463185183433, guid: 36bda0a4e29e47cae89ccbe5a0b1dfcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Jump
+      objectReference: {fileID: 0}
     - target: {fileID: 6312120787748383668, guid: 36bda0a4e29e47cae89ccbe5a0b1dfcf, type: 3}
       propertyPath: m_Pivot.x
       value: 0

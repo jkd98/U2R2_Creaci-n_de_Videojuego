@@ -4337,7 +4337,8 @@ PrefabInstance:
       value: Frog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1364321951546076273, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
@@ -4347,7 +4348,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 8514574666017239402}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09a484c358cec271390905adbd40b37f, type: 3}
   m_Name: 
