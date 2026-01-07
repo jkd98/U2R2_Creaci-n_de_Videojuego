@@ -25,6 +25,11 @@ public class PlayerMove : MonoBehaviour
     public GameObject dustLeft;
     public GameObject dustRight;
 
+    // dash de movimiento (opcional)
+    public float dashCooldown = 2.0f; //para esperar entre dashes
+    public GameObject dashEffectParticle; //particulas de dash
+    public float dashSpeed = 30.0f; //velocidad de dash
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); //obtiene referencia de el componente
@@ -32,6 +37,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        dashCooldown -= Time.deltaTime; //reduce el cooldown del dash
         if (Input.GetKey("space"))
         {
             if (CheckGround.isGrounded) // Si está en el suelo
@@ -90,9 +96,17 @@ public class PlayerMove : MonoBehaviour
             {
                 dustLeft.SetActive(true);
                 dustRight.SetActive(false);
-
             }
 
+            if (Input.GetKey("e") && dashCooldown <= 0)
+            {
+                Dash();
+            }
+
+        }
+        else if (Input.GetKey("e") && dashCooldown <= 0)
+        {
+            Dash();
         }
         else if (Input.GetKey("a") || Input.GetKey("left"))
         {
@@ -104,6 +118,10 @@ public class PlayerMove : MonoBehaviour
                 dustLeft.SetActive(false);
                 dustRight.SetActive(true);
 
+            }
+            if (Input.GetKey("e") && dashCooldown <= 0)
+            {
+                Dash();
             }
         }
         else
@@ -127,5 +145,23 @@ public class PlayerMove : MonoBehaviour
                 rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier) * Time.deltaTime;
             }
         }
+    }
+
+    public void Dash()
+    {
+        GameObject dashObject;
+        dashObject = Instantiate(dashEffectParticle, transform.position, transform.rotation); // crea las particulas en la posicion del jugador
+        if (spriteRenderer.flipX)
+        {
+            //Esta mirando a la derecha
+            rb2d.AddForce(Vector2.left * dashSpeed, ForceMode2D.Impulse);
+        }
+        else
+        {
+            //Esta mirando a la izquierda
+            rb2d.AddForce(Vector2.right * dashSpeed, ForceMode2D.Impulse);
+        }
+        dashCooldown = 2.0f; //resetea el cooldown
+        Destroy(dashObject, 1f); //destruye las particulas despues de 0.5 segundos
     }
 }
