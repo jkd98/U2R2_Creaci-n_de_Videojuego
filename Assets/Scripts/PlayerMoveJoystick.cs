@@ -23,6 +23,10 @@ public class PlayerMoveJoystick : MonoBehaviour
     public float doubleJumpSpeed = 2.5f; // Para que el doble salto sea un poco más bajo
     private bool canDoubleJump = false;
 
+    // Para las particulas
+    public GameObject dustLeft;
+    public GameObject dustRight;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); //obtiene referencia de el componente
@@ -35,15 +39,29 @@ public class PlayerMoveJoystick : MonoBehaviour
         {
             spriteRenderer.flipX = false; // mirar a la derecha
             animator.SetBool("Run", true);
+            if (CheckGround.isGrounded)
+            {
+                dustLeft.SetActive(true);
+                dustRight.SetActive(false);
+
+            }
         }
         else if (horizontalMove < -0.1f)
         {
             spriteRenderer.flipX = true; // mirar a la izquierda
             animator.SetBool("Run", true);
+            if (CheckGround.isGrounded)
+            {
+                dustLeft.SetActive(false);
+                dustRight.SetActive(true);
+
+            }
         }
         else
         {
             animator.SetBool("Run", false);
+            dustLeft.SetActive(false);
+            dustRight.SetActive(false);
         }
 
         // Animaciones de salto
@@ -58,6 +76,8 @@ public class PlayerMoveJoystick : MonoBehaviour
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
+            dustLeft.SetActive(false);
+            dustRight.SetActive(false);
         }
 
         if (rb2d.velocity.y < -0.1f)

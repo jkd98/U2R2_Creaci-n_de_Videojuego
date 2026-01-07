@@ -131,20 +131,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 837059762811428789, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+      propertyPath: dustLeft
+      value: 
+      objectReference: {fileID: 335678296}
+    - target: {fileID: 837059762811428789, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 528269343}
     - target: {fileID: 837059762811428789, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+      propertyPath: dustRight
+      value: 
+      objectReference: {fileID: 266728583}
+    - target: {fileID: 837059762811428789, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545491556753174066, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737746950292501830, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4159418771030407977, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.93
+      value: 2.87
       objectReference: {fileID: 0}
     - target: {fileID: 4159418771030407977, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.76
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 4159418771030407977, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -178,6 +194,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5074436693334098860, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+      propertyPath: dustLeft
+      value: 
+      objectReference: {fileID: 335678296}
+    - target: {fileID: 5074436693334098860, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+      propertyPath: dustRight
+      value: 
+      objectReference: {fileID: 266728583}
     - target: {fileID: 6288229523954353267, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
       propertyPath: m_Name
       value: Frog
@@ -186,7 +210,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4159418771030407977, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 519420032}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
@@ -219,7 +243,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e3db6cf81bba055d89201f5ebbebad00, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.651
+  m_Volume: 0.453
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -438,6 +462,11 @@ MonoBehaviour:
   transition: {fileID: 204479082}
   totalFruitsText: {fileID: 1538659690}
   recolectedFruitsText: {fileID: 337414836}
+--- !u!1 &266728583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1545491556753174066, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+  m_PrefabInstance: {fileID: 42805464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &302938138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4159418771030407977, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
@@ -504,6 +533,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2859643279973333566, guid: 48181978472fc8feaaa113c1ec8edce7, type: 3}
   m_PrefabInstance: {fileID: 313486276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &335678296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2737746950292501830, guid: 98815b71e23268d37a789325dcd9a3e8, type: 3}
+  m_PrefabInstance: {fileID: 42805464}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &337414836 stripped
 MonoBehaviour:

@@ -21,6 +21,10 @@ public class PlayerMove : MonoBehaviour
     public float doubleJumpSpeed = 2.5f; // Para que el doble salto sea un poco más bajo
     private bool canDoubleJump = false;
 
+    // Para las particulas
+    public GameObject dustLeft;
+    public GameObject dustRight;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); //obtiene referencia de el componente
@@ -61,6 +65,8 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("Jump", true);
             animator.SetBool("Run", false);
+            dustLeft.SetActive(false);
+            dustRight.SetActive(false);
         }
 
         if (rb2d.velocity.y < 0)
@@ -80,17 +86,32 @@ public class PlayerMove : MonoBehaviour
             rb2d.velocity = new Vector2(runSpeed, rb2d.velocity.y);
             spriteRenderer.flipX = false; // mirar a la derecha
             animator.SetBool("Run", true);
+            if (CheckGround.isGrounded)
+            {
+                dustLeft.SetActive(true);
+                dustRight.SetActive(false);
+
+            }
+
         }
         else if (Input.GetKey("a") || Input.GetKey("left"))
         {
             rb2d.velocity = new Vector2(-runSpeed, rb2d.velocity.y);
             spriteRenderer.flipX = true; // mirar a la izquierda
             animator.SetBool("Run", true);
+            if (CheckGround.isGrounded)
+            {
+                dustLeft.SetActive(false);
+                dustRight.SetActive(true);
+
+            }
         }
         else
         {
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
             animator.SetBool("Run", false);
+            dustLeft.SetActive(false);
+            dustRight.SetActive(false);
         }
 
         if (betterJump)  // Si esta opción está activada
