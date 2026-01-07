@@ -30,6 +30,13 @@ public class PlayerMove : MonoBehaviour
     public GameObject dashEffectParticle; //particulas de dash
     public float dashSpeed = 30.0f; //velocidad de dash
 
+    // wall
+    bool isTouchingFront = false;
+    bool isWallSliding = false;
+    public float wallSlidingSpeed = 0.75f;
+    bool isTouchingR = false;
+    bool isTouchingL = false;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>(); //obtiene referencia de el componente
@@ -38,7 +45,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         dashCooldown -= Time.deltaTime; //reduce el cooldown del dash
-        if (Input.GetKey("space"))
+        if (Input.GetKey("space") && !isWallSliding)
         {
             if (CheckGround.isGrounded) // Si está en el suelo
             {
@@ -83,11 +90,27 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("Falling", false);
         }
+
+        if (isTouchingFront && !CheckGround.isGrounded)
+        {
+            isWallSliding = true;
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+
+        if (isWallSliding)
+        {
+            animator.Play("Wall");
+            rb2d.velocity = new Vector2(rb2d.velocity.x, Mathf.Clamp(rb2d.velocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+
     }
 
     void FixedUpdate()
     {
-        if (Input.GetKey("d") || Input.GetKey("right"))
+        if (Input.GetKey("d") || Input.GetKey("right") && !isTouchingR)
         {
             rb2d.velocity = new Vector2(runSpeed, rb2d.velocity.y);
             spriteRenderer.flipX = false; // mirar a la derecha
@@ -108,7 +131,7 @@ public class PlayerMove : MonoBehaviour
         {
             Dash();
         }
-        else if (Input.GetKey("a") || Input.GetKey("left"))
+        else if (Input.GetKey("a") || Input.GetKey("left") && !isTouchingL)
         {
             rb2d.velocity = new Vector2(-runSpeed, rb2d.velocity.y);
             spriteRenderer.flipX = true; // mirar a la izquierda
@@ -163,5 +186,27 @@ public class PlayerMove : MonoBehaviour
         }
         dashCooldown = 2.0f; //resetea el cooldown
         Destroy(dashObject, 1f); //destruye las particulas despues de 0.5 segundos
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("WallRight"))
+        {
+            isTouchingFront = true;
+            isTouchingR = true;
+        }
+
+        if (collision.gameObject.CompareTag("WallLeft"))
+        {
+            isTouchingFront = true;
+            isTouchingL = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+            isTouchingFront = false;
+            isTouchingR = false;
+            isTouchingL = false;
     }
 }
